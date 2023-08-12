@@ -1,0 +1,48 @@
+{
+  "headerTitle": "Rocket Team",
+  "home": "Inicio",
+  "services": "Servicios",
+  "development": "Desarrollo",
+  "faq": "FAQ",
+  "contact": "Contacto",
+  "heroTitle": "Software del Futuro",
+  "heroSubtitle": "Soluciones Digitales todo en uno para ayudar a su negocio a destacar en la era digital.",
+  "heroCTA": "Comienza tu viaje",
+  "heroCard1": "Expertos Digitales",
+  "heroCard2": "Entrega a la velocidad de la luz",
+  "heroCard3": "Soluciones personalizadas",
+  "servicesTitle": "Servicios Digitales",
+  "servicesSubtitle": "Explore nuestros servicios diseñados para satisfacer sus necesidades específicas y hacer avanzar su negocio.",
+  "servicesCard1": "Diseño UX/UI",
+  "servicesCard2": "Sitios Web",
+  "servicesCard3": "Aplicaciones Telefónicas",
+  "servicesCard4": "SEO",
+  "servicesCard5": "Copyeriting",
+  "servicesCard6": "Integración de IA",
+  "rocketWayTitle": "El camino de Rocket",
+  "rocketWaySubtitle": "Así es como damos vida a tu idea.",
+  "way1": "Escuchamos atentamente sus necesidades.",
+  "way2": "Le proponemos una solución.",
+  "way3": "Diseñamos tu producto.",
+  "way4": "Desarrollamos tu producto.",
+  "way5": "Mantenimiento de por vida.",
+  "rocketWayCTA": "Lanzamiento",
+  "FAQTitle": "Preguntas frecuentes",
+  "FAQ1": {
+    "question": "¿Cuánto cuesta construir una aplicación?",
+    "Answer": ""
+  },
+  "FAQ2": {
+    "question": "¿Cuánto tiempo se tarda en construir una aplicación o sitio web?",
+    "Answer": ""
+  },
+  "FAQ3": {
+    "question": "¿Cuánto tiempo se tarda en construir una aplicación o sitio web?",
+    "Answer": ""
+  },
+  "ContactUsTitle": "Contáctenos",
+  "ContactName": "Nombre",
+  "ContactEmail": "Email",
+  "ContactMessage": "Mensaje",
+  "ContactSubmitBTN": "Enviar"
+}

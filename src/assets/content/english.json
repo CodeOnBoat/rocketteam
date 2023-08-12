@@ -1,0 +1,48 @@
+{
+  "headerTitle": "Rocket Team",
+  "home": "Home",
+  "services": "Services",
+  "development": "Development",
+  "faq": "FAQ",
+  "contact": "Contact",
+  "heroTitle": "Software from the Future",
+  "heroSubtitle": "All-in-one Digital solutions to Help your Business Stand Out in the Digital Era.",
+  "heroCTA": "Start your Journey",
+  "heroCard1": "Digital Experts",
+  "heroCard2": "Light-speed Delivery",
+  "heroCard3": "Personalised Solutions",
+  "servicesTitle": "Digital Services",
+  "servicesSubtitle": "Explore our services designed to meet your specific needs and drive your business forward.",
+  "servicesCard1": "UX/UI Design",
+  "servicesCard2": "Websites",
+  "servicesCard3": "Phone Apps",
+  "servicesCard4": "SEO",
+  "servicesCard5": "Copyeriting",
+  "servicesCard6": "AI Integration",
+  "rocketWayTitle": "The Rocket way",
+  "rocketWaySubtitle": "This is how we bring your idea to life.",
+  "way1": "We listen carefully your needs. ",
+  "way2": "We propose you a solution.",
+  "way3": "We design your product.",
+  "way4": "We develop your product.",
+  "way5": "Life-long maintenance. ",
+  "rocketWayCTA": "Launch",
+  "FAQTitle": "Frequently asked questions",
+  "FAQ1": {
+    "question": "How much does it cost to build an app?",
+    "Answer": ""
+  },
+  "FAQ2": {
+    "question": "How long does it take to build an app or website?",
+    "Answer": ""
+  },
+  "FAQ3": {
+    "question": "How long does it take to build an app or website?",
+    "Answer": ""
+  },
+  "ContactUsTitle": "Contact Us",
+  "ContactName": "Name",
+  "ContactEmail": "Email",
+  "ContactMessage": "Message",
+  "ContactSubmitBTN": "Submit"
+}
