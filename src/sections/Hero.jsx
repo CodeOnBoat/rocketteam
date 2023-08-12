@@ -4,5 +4,10 @@ import { useTranslation } from "react-i18next";
 export const Hero = () => {
   const { t } = useTranslation();
 
-  return <div>{t("heroTitle")}</div>;
+  return (
+    <>
+      <div>{t("heroTitle")}</div>
+      <div>{t("heroSubtitle")}</div>
+    </>
+  );
 };
