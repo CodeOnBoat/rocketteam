@@ -48,6 +48,10 @@ h1 {
   }
   h2 {
   }
+  p {
+    font-family: "SequelSansLightHead";
+    font-size: 1.8em;
+  }
 }
 h2 {
   font-family: "SequelSansHeavyHead";
@@ -57,7 +61,7 @@ h2 {
 
 p {
   font-family: "SequelSansLightHead";
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
 
 label {
