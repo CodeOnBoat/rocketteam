@@ -11,7 +11,6 @@ export const Landing = () => {
       <Hero />
       <Services />
       <RocketWay />
-      {/* <FAQ /> */}
       <Contact />
     </div>
   );
