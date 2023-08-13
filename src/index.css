@@ -63,11 +63,24 @@ header {
 
 button {
   border-radius: 12px;
-  background-color: black;
+  background: linear-gradient(to right, #000000, #000000, #322a2a, #554c55);
   color: white;
   font-family: "SequelSansMediumHead";
   padding: 0.7em 1em;
   font-size: x-large;
+  background-size: 300% 100%;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 * {

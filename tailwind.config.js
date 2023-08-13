@@ -3,16 +3,17 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        x: "100rem",
+        x: "90rem",
       },
 
       colors: {
         primary: "#EB50EB",
         secondary: "#50EBD3",
+        secondaryLight:"rgba(80,235, 211,.1)",
       },
       backgroundImage: {
         gradientRocketWay:
-          "linear-gradient(90deg, rgba(235, 80, 235, 0.15) 0%, rgba(235, 80, 235, 0.00) 100%)",
+          "linear-gradient(90deg, rgba(235, 80, 235, 0.10) 0%, rgba(80, 235, 211, 0.04) 100%)",
         gradientFaq:
           "linear-gradient(180deg, rgba(80, 235, 211, 0.10) 0%, rgba(255, 0, 255, 0.04) 100%)",
       },

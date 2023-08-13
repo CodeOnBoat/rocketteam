@@ -1,20 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import BGImage from "../assets/images/hero/heroWave.png";
 import HeroCards from "../assets/content/hero";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   const { t } = useTranslation();
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY);
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []);
 
   return (
-    <div
+    <motion.div
       className="flex flex-col justify-center items-center gap-12 mt-5 sm:mt-20"
-      style={{ minHeight: "60vh" }}
+      style={{
+        minHeight: "60vh",
+      }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
     >
       <img
         src={BGImage}
         className="absolute w-screen top-0 -z-10 h-4/6 sm:h-3/5"
+        style={{
+          transform: `translateY(${scroll * 0.2}px)`,
+        }}
       />
+
       <h1 className="text-center">{t("heroTitle")}</h1>
       <p style={{ maxWidth: "34ch", textAlign: "center" }}>
         {t("heroSubtitle")}
@@ -31,6 +52,6 @@ export const Hero = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
