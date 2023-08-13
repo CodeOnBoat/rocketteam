@@ -6,7 +6,7 @@ import { FAQ } from "./sections/FAQ";
 
 export const Landing = () => {
   return (
-    <div className="w-11/12 max-w-7xl m-auto">
+    <div className="w-11/12 max-w-7xl m-auto flex flex-col gap-40">
       <Hero />
       <Services />
       <RocketWay />

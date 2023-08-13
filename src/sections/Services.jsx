@@ -10,7 +10,7 @@ export const Services = () => {
     <div className="flex flex-col gap-10 ">
       <img
         src={BGimage}
-        className="absolute w-screen left-0 h-x sm:h-5/6 md:h-3/5 "
+        className="absolute w-screen left-0 h-x sm:h-5/6 md:h-3/5 -z-10"
       />
       <div>
         <h2>{t("servicesTitle")}</h2>
