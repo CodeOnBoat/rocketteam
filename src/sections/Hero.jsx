@@ -8,6 +8,7 @@ export const Hero = () => {
     <>
       <div>{t("heroTitle")}</div>
       <div>{t("heroSubtitle")}</div>
+      <button className="bg-black text-white">{t("heroCTA")}</button>
     </>
   );
 };
