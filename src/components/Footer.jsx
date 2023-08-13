@@ -21,7 +21,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-5 ">
               <div>Tallin, Estonia</div>
               <a>hello@rocket-team.space</a>
-              <div>+31 4855937563</div>
+              <div>+31 5855937563</div>
             </div>
           </div>
           <div className="flex flex-col gap-5  text-center sm:text-start">
