@@ -14,7 +14,7 @@ export const Hero = () => {
         {t("heroSubtitle")}
       </p>
       <button className="bg-black text-white">{t("heroCTA")}</button>
-      <div className="flex justify-center items-center gap-10 mt-20 invisible md:visible w-full">
+      <div className="hidden justify-center items-center gap-10 mt-20 md:flex w-full">
         {HeroCards.map((card, i) => (
           <div
             key={i}
