@@ -7,8 +7,14 @@ export const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col justify-center items-center gap-6 mt-20">
-      <img src={BGImage} className="absolute w-screen top-0 -z-10 h-3/5" />
+    <div
+      className="flex flex-col justify-center items-center gap-12 mt-5 sm:mt-20"
+      style={{ minHeight: "60vh" }}
+    >
+      <img
+        src={BGImage}
+        className="absolute w-screen top-0 -z-10 h-4/6 sm:h-3/5"
+      />
       <h1 className="text-center">{t("heroTitle")}</h1>
       <p style={{ maxWidth: "34ch", textAlign: "center" }}>
         {t("heroSubtitle")}

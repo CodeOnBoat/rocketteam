@@ -29,7 +29,7 @@ export const Footer = () => {
             <label>{t("services")}</label>
             <label>{t("development")}</label>
             <label>{t("faq")}</label>
-            <button>{t("contact")}</button>
+            <button className="py-2">{t("contact")}</button>
           </div>
         </div>
       </div>

@@ -7,11 +7,11 @@ import { Contact } from "./sections/Contact";
 
 export const Landing = () => {
   return (
-    <div className="w-11/12 max-w-7xl m-auto flex flex-col gap-40">
+    <div className="w-11/12 max-w-7xl m-auto flex flex-col gap-20 ">
       <Hero />
       <Services />
       <RocketWay />
-      <FAQ />
+      {/* <FAQ /> */}
       <Contact />
     </div>
   );

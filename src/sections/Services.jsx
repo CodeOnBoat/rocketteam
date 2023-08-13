@@ -8,8 +8,11 @@ export const Services = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="h-10"></div>
-      <img src={BGimage} className="absolute w-screen left-0 h-full" />
+      <div className="h-14 sm:h-0"></div>
+      <img
+        src={BGimage}
+        className="-z-10 absolute min-w-screen object-cover left-0 h-x sm:object-fill sm:h-full md:h-5/6 lg:h-4/5 sm:w-full "
+      />
       <div>
         <h2>{t("servicesTitle")}</h2>
         <p>{t("servicesSubtitle")}</p>

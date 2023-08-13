@@ -13,9 +13,9 @@ export const RocketWay = () => {
         {rocketWay.map((way, index) => (
           <div className="flex gap-5 mb-3 items-center bg-gradientRocketWay rounded-full p-2">
             <div className="bg-secondary bg-opacity-50 p-3 rounded-full flex justify-center items-center h-10 w-10">
-              {index}
+              {index + 1}
             </div>
-            <label>{t(way)}</label>
+            <label className="text-left">{t(way)}</label>
           </div>
         ))}
       </div>
