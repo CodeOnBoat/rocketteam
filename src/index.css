@@ -34,10 +34,12 @@
 
 h1 {
   font-family: "SequelSansBlackDisplay";
+  font-size: 3em;
 }
 
 h2 {
   font-family: "SequelSansHeavyHead";
+  font-size: 2em;
 }
 
 p {
@@ -58,3 +60,4 @@ button {
   color: white;
   font-family: "SequelSansMediumHead";
 }
+
