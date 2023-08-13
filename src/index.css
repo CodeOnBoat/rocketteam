@@ -34,7 +34,10 @@
 
 h1 {
   font-family: "SequelSansBlackDisplay";
-  font-size: 3em;
+  font-size: 4em;
+  margin: 0;
+  padding: 0;
+  line-height: 1em;
 }
 
 h2 {
@@ -44,6 +47,7 @@ h2 {
 
 p {
   font-family: "SequelSansLightHead";
+  font-size: 1.2em;
 }
 
 label {
@@ -55,9 +59,14 @@ header {
 }
 
 button {
-  border-radius: 24px;
+  border-radius: 12px;
   background-color: black;
   color: white;
   font-family: "SequelSansMediumHead";
+  padding: 0.7em 1em;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
