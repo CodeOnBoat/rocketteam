@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "SequelSansBlackDisplay";
-  src: url("./assets/font/Sequel\ Sans\ TTF/Sequel\ Sans\ Black\ Display.ttf");
+  src: url("./assets/font/Sequel\ Sans\ TTF/Sequel\ Sans\ Black\ Disp.ttf");
 }
 
 @font-face {
@@ -24,7 +24,12 @@
 
 @font-face {
   font-family: "SequelSansBookDisplay";
-  src: url("./assets/font/Sequel\ Sans\ TTF/Sequel\ Sans\ Book\ Display.ttf");
+  src: url("./assets/font/Sequel\ Sans\ TTF/Sequel\ Sans\ Book\ Disp.ttf");
+}
+
+@font-face {
+  font-family: "SequelSansMediumHead";
+  src: url("./assets/font/Sequel\ Sans\ TTF/Sequel\ Sans\ Medium\ Head.ttf");
 }
 
 h1 {
@@ -40,11 +45,11 @@ p {
 }
 
 label {
-  font-family: "SequelSansBookBody" ";
+  font-family: "SequelSansBookBody";
 }
 
 header {
-    font-family: "SequelSansBookDisplay";
+  font-family: "SequelSansBookDisplay";
 }
 
 button {
