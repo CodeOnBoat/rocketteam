@@ -7,11 +7,14 @@ import {
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { use } from "i18next";
+import { useTranslation } from "react-i18next";
 
 export const FAQ = () => {
+  const { t } = useTranslation();
   return (
     <section className="my-8">
-      <h2>Frequently asked questions</h2>
+      <h2>{t("faq")}</h2>
       <div className="my-8">
         {faq.map((question, i) => (
           <Accordion

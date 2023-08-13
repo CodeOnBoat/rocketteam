@@ -7,11 +7,9 @@ export const Services = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-10 ">
-      <img
-        src={BGimage}
-        className="absolute w-screen left-0 h-x sm:h-5/6 md:h-3/5 -z-10"
-      />
+    <div className="flex flex-col gap-10">
+      <div className="h-10"></div>
+      <img src={BGimage} className="absolute w-screen left-0 h-full" />
       <div>
         <h2>{t("servicesTitle")}</h2>
         <p>{t("servicesSubtitle")}</p>
@@ -23,7 +21,7 @@ export const Services = () => {
             key={index}
           >
             <label>{t(service.text)}</label>
-            <img className="w-20" src={service.image} alt={service.alt} />
+            <img className="w-28" src={service.image} alt={service.alt} />
           </div>
         ))}
       </div>
