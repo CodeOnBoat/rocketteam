@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import BGImage from "../assets/images/hero/heroWave.png";
 import HeroCards from "../assets/content/hero";
