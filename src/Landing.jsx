@@ -3,6 +3,7 @@ import { Hero } from "./sections/Hero";
 import { Services } from "./sections/Services";
 import { RocketWay } from "./sections/RocketWay";
 import { FAQ } from "./sections/FAQ";
+import { Contact } from "./sections/Contact";
 
 export const Landing = () => {
   return (
@@ -11,6 +12,7 @@ export const Landing = () => {
       <Services />
       <RocketWay />
       <FAQ />
+      <Contact />
     </div>
   );
 };

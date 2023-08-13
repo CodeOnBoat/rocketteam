@@ -9,8 +9,8 @@ export const Hero = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-6 mt-20">
       <img src={BGImage} className="absolute w-screen top-0 -z-10 h-3/5" />
-      <h1>{t("heroTitle")}</h1>
-      <p style={{ maxWidth: "30ch", textAlign: "center" }}>
+      <h1 className="text-center">{t("heroTitle")}</h1>
+      <p style={{ maxWidth: "34ch", textAlign: "center" }}>
         {t("heroSubtitle")}
       </p>
       <button className="bg-black text-white">{t("heroCTA")}</button>
@@ -20,7 +20,7 @@ export const Hero = () => {
             key={i}
             className="flex sm:flex-col justify-center items-center gap-6 w-1/4"
           >
-            <img src={card.image} className="w-40" />
+            <img src={card.image} className="w-28" />
             <label>{t(card.title)}</label>
           </div>
         ))}
