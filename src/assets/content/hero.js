@@ -4,15 +4,15 @@ import Img3 from "../images/hero/puzzleIcon.png";
 
 const hero = [
   {
-    title: "Digital Experts",
+    title: "HeroCard1",
     image: Img1,
   },
   {
-    title: "Light-speed Delivery",
+    title: "HeroCard2",
     image: Img2,
   },
   {
-    title: "Personalised Solutions",
+    title: "HeroCard3",
     image: Img3,
   },
 ];
