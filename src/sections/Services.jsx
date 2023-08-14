@@ -12,7 +12,7 @@ export const Services = ({ servicesRef }) => {
       <div className="h-14 sm:h-0"></div>
       <img
         src={BGimage}
-        className="-z-10 absolute min-w-screen object-cover left-0 h-x sm:object-fill sm:h-full md:h-5/6 lg:h-4/5 sm:w-full "
+        className="-z-10 absolute min-w-screen object-cover left-0 h-x sm:object-fill sm:h-full md:h-5/6 lg:h-4/5 sm:w-full wave"
       />
       <motion.div
         initial={{ opacity: 0, x: -100 }}

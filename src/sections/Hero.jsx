@@ -30,12 +30,11 @@ export const Hero = ({ contactRef }) => {
     >
       <img
         src={BGImage}
-        className="absolute w-screen top-0 -z-10 h-4/6 sm:h-3/5"
+        className="absolute w-screen top-0 -z-10 h-4/6 sm:h-3/5 wave"
         style={{
           transform: `translateY(${scroll * 0.2}px)`,
         }}
       />
-
       <h1 className="text-center">{t("heroTitle")}</h1>
       <p style={{ maxWidth: "34ch", textAlign: "center" }}>
         {t("heroSubtitle")}

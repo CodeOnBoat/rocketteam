@@ -8,7 +8,7 @@ export const Footer = ({ contactRef, servicesRef, rocketWayRef }) => {
     <>
       <img
         src={BGimage}
-        className="absolute h-full w-screen -z-10 sm:h-3/5"
+        className="absolute h-full w-screen -z-10 sm:h-3/5 wave"
         alt=""
       />
 
