@@ -1,14 +1,14 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { services } from "../assets/content/services";
-import BGimage from "../assets/images/services/BGimage.png";
+import BGimage from "../assets/images/services/BGimage.webp";
 import { motion } from "framer-motion";
 
-export const Services = () => {
+export const Services = ({ servicesRef }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 overflow-x-hidden" ref={servicesRef}>
       <div className="h-14 sm:h-0"></div>
       <img
         src={BGimage}
@@ -23,13 +23,13 @@ export const Services = () => {
         <h2>{t("servicesTitle")}</h2>
         <p>{t("servicesSubtitle")}</p>
       </motion.div>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {services.map((service, index) => (
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="flex flex-col justify-center items-center gap-2"
+            className="flex flex-col justify-center items-center gap-2 bg-white py-3 rounded-2xl shadow-xl w-80 m-auto"
             key={index}
             viewport={{ once: true }}
           >

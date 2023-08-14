@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import BGImage from "../assets/images/hero/heroWave.png";
+import BGImage from "../assets/images/hero/heroWave.webp";
 import HeroCards from "../assets/content/hero";
 import { motion } from "framer-motion";
 
-export const Hero = () => {
+export const Hero = ({ contactRef }) => {
   const { t } = useTranslation();
   const [scroll, setScroll] = useState(0);
 
@@ -40,7 +40,14 @@ export const Hero = () => {
       <p style={{ maxWidth: "34ch", textAlign: "center" }}>
         {t("heroSubtitle")}
       </p>
-      <button className="bg-black text-white">{t("heroCTA")}</button>
+      <button
+        className="bg-black text-white"
+        onClick={() => {
+          contactRef.current.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        {t("heroCTA")}
+      </button>
       <div className="hidden justify-center items-center gap-10 mt-20 md:flex w-full">
         {HeroCards.map((card, i) => (
           <div

@@ -4,11 +4,11 @@ import { rocketWay } from "../assets/content/rocketWay";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
 import { motion } from "framer-motion";
 
-export const RocketWay = () => {
+export const RocketWay = ({ rocketWayRef }) => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div ref={rocketWayRef} className="overflow-x-hidden">
       <h2 className="text-center">
         <div className="flex w-full justify-center sm:justify-start items-center gap-2">
           {t("rocketWayTitle")}
