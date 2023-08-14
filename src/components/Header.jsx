@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
 import { useTranslation } from "react-i18next";
-import { MenuItem, Select, FormControl } from "@mui/material";
+import ItalyIcon from "../assets/images/header/italy.png";
+import SpainIcon from "../assets/images/header/spain.png";
+import UKIcon from "../assets/images/header/england.png";
+import { motion } from "framer-motion";
 
-export const Header = () => {
+export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = React.useState(i18n.language);
+  const [language, setLanguage] = useState(i18n.language);
+  const [showFlags, setShowFlags] = useState(false);
 
-  const changeLanguage = (event) => {
-    const newLanguage = event.target.value;
-    i18n.changeLanguage(newLanguage);
-    setLanguage(newLanguage);
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language);
+    setLanguage(language);
+    setShowFlags(false);
   };
+
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [i18n.language]);
+
   return (
     <header className="flex items-center py-2 px-4 justify-center mt-2 sm:mt-0">
       <div className="flex g-2 items-center">
@@ -19,30 +28,77 @@ export const Header = () => {
         <div className="text-3xl md:text-2xl tracking-widest">Rocket Team</div>
       </div>
       <div className="flex-grow justify-end items-center gap-10 hidden lg:flex">
-        <label className="hover:-translate-y-0.5 cursor-pointer duration-100">
-          {t("home")}
-        </label>
-        <label className="hover:-translate-y-0.5 cursor-pointer duration-100">
+        <label
+          className="hover:-translate-y-0.5 cursor-pointer duration-100"
+          onClick={() => {
+            servicesRef.current.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           {t("services")}
         </label>
-        <label className="hover:-translate-y-0.5 cursor-pointer duration-100">
+        <label
+          className="hover:-translate-y-0.5 cursor-pointer duration-100"
+          onClick={() => {
+            rocketWayRef.current.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           {t("development")}
         </label>
-        <button style={{ padding: ".1em 1em", fontSize: "18px" }}>
+        <button
+          style={{ padding: ".1em 1em", fontSize: "18px" }}
+          onClick={() => {
+            contactRef.current.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           {t("contact")}
         </button>
-        <FormControl variant="standard">
-          <Select
-            className="py-1"
-            style={{ padding: "0em" }}
-            value={language}
-            onChange={changeLanguage}
-          >
-            <MenuItem value="en">Eng</MenuItem>
-            <MenuItem value="es">Esp</MenuItem>
-            <MenuItem value="it">Ita</MenuItem>
-          </Select>
-        </FormControl>
+        <div>
+          <img
+            src={
+              language === "es"
+                ? SpainIcon
+                : language === "en"
+                ? UKIcon
+                : ItalyIcon
+            }
+            className="w-8 cursor-pointer rounded-xl"
+            onClick={() => setShowFlags(!showFlags)}
+          />
+        </div>
+        {showFlags && (
+          <div className="absolute top-0 right-0 flex flex-col mt-12 mr-4">
+            {language !== "es" && (
+              <motion.img
+                src={SpainIcon}
+                className="w-8 cursor-pointer rounded-xl"
+                onClick={() => changeLanguage("es")}
+                value="es"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              />
+            )}
+            {language !== "en" && (
+              <motion.img
+                src={UKIcon}
+                className="w-8 cursor-pointer rounded-xl"
+                onClick={() => changeLanguage("en")}
+                value="en"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              />
+            )}
+            {language !== "it" && (
+              <motion.img
+                src={ItalyIcon}
+                className="w-8 cursor-pointer rounded-xl"
+                onClick={() => changeLanguage("it")}
+                value="it"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              />
+            )}
+          </div>
+        )}
       </div>
     </header>
   );

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
 import { sendEmailRocketTeam, sendThanksEmailToProspect } from "../mail/mailJs";
 
-export const Contact = () => {
+export const Contact = ({ contactRef }) => {
   const { t } = useTranslation();
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -23,6 +23,8 @@ export const Contact = () => {
   };
 
   return (
+    <>
+    <div className="h-2" ref={contactRef}></div>
     <Card
       className="flex flex-col gap-5 m-auto w-full max-w-3xl px-5 sm:px-20 py-10 pt-20 mb-28 relative"
       style={{ borderRadius: "24px" }}
@@ -65,5 +67,6 @@ export const Contact = () => {
         {t("ContactSubmitBTN")}
       </button>
     </Card>
+    </>
   );
 };
