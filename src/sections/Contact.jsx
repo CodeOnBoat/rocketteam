@@ -1,10 +1,27 @@
 import { Card } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
+import { sendEmailRocketTeam, sendThanksEmailToProspect } from "../mail/mailJs";
 
 export const Contact = () => {
   const { t } = useTranslation();
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
+  const [message, setMessage] = useState();
+
+  const handleSubmission = (e) => {
+    e.preventDefault();
+    sendEmailRocketTeam(name, email, phone, message);
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+    alert("Your Message has been sent");
+    sendThanksEmailToProspect(email, name);
+  };
+
   return (
     <Card
       className="flex flex-col gap-5 m-auto w-full max-w-3xl px-5 sm:px-20 py-10 pt-20 mb-28 relative"
@@ -18,20 +35,35 @@ export const Contact = () => {
       <h2 className="text-center">{t("ContactUsTitle")}</h2>
       <input
         type="text"
-        placeholder="Name"
+        placeholder={t("ContactName")}
+        value={name || ""}
+        onChange={(event) => setName(event?.target?.value)}
         className=" p-2 rounded-md border-black border-opacity-30 border focus:outline-none focus:border-primary focus:border-opacity-30 focus:border-2 "
       />
       <input
         type="text"
-        placeholder="Email"
+        placeholder={t("ContactEmail")}
+        value={email || ""}
+        onChange={(event) => setEmail(event?.target?.value)}
+        className=" p-2 rounded-md border-black border-opacity-30 border focus:outline-none focus:border-primary focus:border-opacity-30 focus:border-2 "
+      />
+      <input
+        type="text"
+        placeholder={t("ContactPhone")}
+        value={phone || ""}
+        onChange={(event) => setPhone(event?.target?.value)}
         className=" p-2 rounded-md border-black border-opacity-30 border focus:outline-none focus:border-primary focus:border-opacity-30 focus:border-2 "
       />
       <textarea
         type="text"
-        placeholder="Message"
+        placeholder={t("ContactMessage")}
+        value={message || ""}
+        onChange={(event) => setMessage(event?.target?.value)}
         className=" h-40 resize-none p-2 rounded-md border-black border-opacity-30 border focus:outline-none focus:border-primary focus:border-opacity-30 focus:border-2 "
       />
-      <button className="m-auto py-1">Submit</button>
+      <button onClick={handleSubmission} className="m-auto py-1">
+        {t("ContactSubmitBTN")}
+      </button>
     </Card>
   );
 };

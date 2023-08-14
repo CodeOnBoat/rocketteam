@@ -20,6 +20,7 @@ export const FAQ = () => {
           <Accordion
             sx={{ mt: 2, borderRadius: "10px" }}
             className="bg-gradientFaq"
+            key={i}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}

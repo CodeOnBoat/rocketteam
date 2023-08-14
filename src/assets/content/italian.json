@@ -43,6 +43,7 @@
   "ContactUsTitle": "Contattaci",
   "ContactName": "Nome",
   "ContactEmail": "Email",
+  "ContactPhone": "Numero telefonico",
   "ContactMessage": "Messaggio",
   "ContactSubmitBTN": "Invia"
 }
