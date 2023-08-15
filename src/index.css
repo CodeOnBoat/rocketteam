@@ -37,7 +37,7 @@ h1 {
   font-size: 3.5em;
   margin: 0;
   padding: 0;
-  line-height: 1em;
+  line-height: 1.15em;
 }
 
 h2 {
@@ -123,4 +123,8 @@ body {
 
 .wave {
   animation: wave 30s infinite;
+}
+
+.country {
+  text-align: left;
 }

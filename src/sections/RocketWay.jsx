@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { rocketWay } from "../assets/content/rocketWay";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
 import { motion } from "framer-motion";
+import HeroCards from "../assets/content/hero";
 
 export const RocketWay = ({ rocketWayRef }) => {
   const { t } = useTranslation();
@@ -40,6 +41,17 @@ export const RocketWay = ({ rocketWayRef }) => {
               </motion.div>
             ))}
           </motion.ul>
+        </div>
+        <div className="hidden justify-center items-center gap-10 mt-20 md:flex w-full">
+          {HeroCards.map((card, i) => (
+            <div
+              key={i}
+              className="flex sm:flex-col justify-center items-center gap-6 w-1/4"
+            >
+              <img src={card.image} className="w-28" />
+              <label>{t(card.title)}</label>
+            </div>
+          ))}
         </div>
       </div>
     </div>

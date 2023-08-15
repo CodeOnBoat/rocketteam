@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import BGImage from "../assets/images/hero/heroWave.webp";
-import HeroCards from "../assets/content/hero";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 export const Hero = ({ contactRef }) => {
   const { t } = useTranslation();
@@ -17,6 +17,16 @@ export const Hero = ({ contactRef }) => {
     };
   }, []);
 
+  const typewriterTexts = [
+    t("heroTitleSoftware"),
+    1500,
+    t("heroTitleWebsites"),
+    1500,
+    t("heroTitlePhoneApps"),
+    1500,
+    t("heroTitleChatbots"),
+    1500,
+  ];
   return (
     <motion.div
       className="flex flex-col justify-center items-center gap-12 mt-5 sm:mt-20"
@@ -35,7 +45,18 @@ export const Hero = ({ contactRef }) => {
           transform: `translateY(${scroll * 0.2}px)`,
         }}
       />
-      <h1 className="text-center">{t("heroTitle")}</h1>
+      <h1 className="text-center">
+        Create your
+        <br />
+        <TypeAnimation
+          sequence={typewriterTexts}
+          speed={30}
+          repeat={Infinity}
+          cursor={false}
+        />
+        <br />
+        {t("heroTitle2")}
+      </h1>
       <p style={{ maxWidth: "34ch", textAlign: "center" }}>
         {t("heroSubtitle")}
       </p>
@@ -47,17 +68,6 @@ export const Hero = ({ contactRef }) => {
       >
         {t("heroCTA")}
       </button>
-      <div className="hidden justify-center items-center gap-10 mt-20 md:flex w-full">
-        {HeroCards.map((card, i) => (
-          <div
-            key={i}
-            className="flex sm:flex-col justify-center items-center gap-6 w-1/4"
-          >
-            <img src={card.image} className="w-28" />
-            <label>{t(card.title)}</label>
-          </div>
-        ))}
-      </div>
     </motion.div>
   );
 };

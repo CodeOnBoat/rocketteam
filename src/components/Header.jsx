@@ -45,7 +45,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
           {t("development")}
         </label>
         <button
-          style={{ padding: ".1em 1em", fontSize: "18px" }}
+          style={{ padding: ".3em 1em", fontSize: "18px" }}
           onClick={() => {
             contactRef.current.scrollIntoView({ behavior: "smooth" });
           }}

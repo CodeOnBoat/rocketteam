@@ -5,7 +5,7 @@ import seoIcon from "../images/services/seoIcon.png";
 import copyWriteIcon from "../images/services/copyWriteIcon.png";
 import aiIcon from "../images/services/aiIcon.png";
 
-export const services = [
+export const servicesx = [
   { image: designIcon, text: "servicesCard1", alt: "Design Service Icon" },
   {
     image: webIcon,
@@ -24,4 +24,17 @@ export const services = [
     alt: "Copywriting Service Icon",
   },
   { image: aiIcon, text: "servicesCard6", alt: "AI Service Icon" },
+];
+export const services = [
+  { image: webIcon, text: "servicesCard2", alt: "Design Service Icon" },
+  {
+    image: appIcon,
+    text: "servicesCard3",
+    alt: "Web Development Service Icon",
+  },
+  {
+    image: aiIcon,
+    text: "servicesCard6",
+    alt: "App Development Service Icon",
+  },
 ];
