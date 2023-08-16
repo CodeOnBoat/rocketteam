@@ -5,6 +5,7 @@ import { RocketWay } from "./sections/RocketWay";
 import { FAQ } from "./sections/FAQ";
 import { Contact } from "./sections/Contact";
 import { rocketWay } from "./assets/content/rocketWay";
+import { WhyUs } from "./sections/WhyUs";
 
 export const Landing = ({ contactRef, servicesRef, rocketWayRef }) => {
   return (
