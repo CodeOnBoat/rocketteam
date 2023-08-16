@@ -1,0 +1,73 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+ul {
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+ul li {
+  max-width: 12rem;
+  justify-self: center;
+  display: grid;
+  grid-template:
+    "icon"
+    "line"
+    "dot"
+    "title"
+    "descr" 1fr;
+  justify-items: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+ul li .icon {
+  grid-area: icon;
+  width: 6rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+
+  font-size: 2.5rem;
+  border: 0.4rem solid var(--bgColor);
+  border-radius: 50%;
+  background: var(--accent-color);
+  background-image: linear-gradient(
+    90deg,
+    rgba(235, 80, 235, 0.1) 0%,
+    rgba(80, 235, 211, 0.04) 100%
+  );
+  box-shadow: -0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+ul li::before {
+  content: "";
+  grid-area: line;
+  height: 2rem;
+  border-right: 2px dotted currentColor;
+}
+
+ul li::after {
+  content: "";
+  grid-area: dot;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent-color);
+  justify-self: center;
+  margin-bottom: 0.5rem;
+}
+
+ul li .title {
+  grid-area: title;
+  margin-block: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
