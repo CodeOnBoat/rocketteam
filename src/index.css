@@ -131,8 +131,7 @@ body {
 }
 
 .wave {
-  animation: wave 30s infinite;
-  animation: colorRotate 20s infinite;
+  animation: wave 30s infinite, colorRotate 20s infinite;
 }
 
 .colorRotate {
