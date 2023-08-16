@@ -12,11 +12,13 @@ const App = () => {
   const contactRef = useRef();
 
   useEffect(() => {
-    const userLanguage = navigator.language.split("-")[0]; // Get the language code
-    if (userLanguage === "it") {
-      i18n.changeLanguage("it");
-    } else if (userLanguage === "es") {
-      i18n.changeLanguage("es");
+    const localLanguage = localStorage.getItem("lang");
+    if (localLanguage) {
+      i18n.changeLanguage(localLanguage);
+    } else {
+      const userLanguage = navigator.language.split("-")[0];
+      i18n.changeLanguage(userLanguage);
+      localStorage.setItem("lang", userLanguage);
     }
   }, [i18n]);
 

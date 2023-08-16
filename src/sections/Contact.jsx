@@ -1,5 +1,5 @@
-import { Card } from "@mui/material";
-import React, { useRef, useState } from "react";
+import { Box, Card } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
 import {
@@ -17,104 +17,61 @@ export const Contact = ({ contactRef }) => {
   const [email, setEmail] = useState();
   const [phone, setPhone] = useState();
   const [message, setMessage] = useState();
-  const [emailError, setEmailError] = useState("");
-  const [phoneError, setPhoneError] = useState("");
-  const [nameError, setNameError] = useState("");
-  const [messageError, setMessageError] = useState("");
+  const [error, setError] = useState("");
 
   const emailInputRef = useRef(null);
+  const nameRef = useRef(null);
+  const messageRef = useRef(null);
+
+  useEffect(() => {
+    console.log(i18n.language);
+  }, []);
 
   const handleSubmission = (e) => {
     e.preventDefault();
-    let isFormValid = true;
 
     if (!name) {
-      setNameError("Please enter your name.");
-      isFormValid = false;
-    } else {
-      setNameError("");
-    }
-
-    if (!email) {
-      setEmailError("Please enter your email.");
-      isFormValid = false;
+      setError("Please enter your name.");
+      nameRef.current.focus();
+    } else if (!email) {
+      setError("Please enter your email.");
+      emailInputRef.current.focus();
     } else if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address.");
-      isFormValid = false;
-      setTimeout(() => {
-        setEmailError("");
-        setEmail("");
-        emailInputRef.current.focus();
-      }, 2000);
+      setError("Please enter a valid email address.");
+      emailInputRef.current.focus();
+    } else if (!phone) {
+      setError("Please enter your phone number.");
+    } else if (!message) {
+      setError("Please enter your message.");
+      messageRef.current.focus();
     } else {
-      setEmailError("");
+      sendEmailRocketTeam(name, email, phone, message);
+      sendThanksEmailToProspect(email, name);
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
     }
-
-    if (!phone) {
-      setPhoneError("Please enter your phone number.");
-      isFormValid = false;
-    } else {
-      setPhoneError("");
-    }
-
-    if (!message) {
-      setMessageError("Please enter your message.");
-      isFormValid = false;
-    } else {
-      setMessageError("");
-    }
-
-    if (!isFormValid) {
-      setTimeout(() => {
-        setNameError("");
-        setEmailError("");
-        setPhoneError("");
-        setMessageError("");
-      }, 2000);
-      return;
-    }
-
-    sendEmailRocketTeam(name, email, phone, message);
-    alert("Your Message has been sent");
-    sendThanksEmailToProspect(email, name);
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
+    setTimeout(() => {
+      setError("");
+    }, 3000);
   };
-  const getCountryByLanguage = (language) => {
-    switch (language) {
-      case "it":
-        return "it";
-      case "es":
-        return "es";
-      case "nl":
-        return "nl";
-      case "sv":
-        return "se";
-      default:
-        return "us";
-    }
-  };
-
-  const currentLanguage = i18n.language || "en";
 
   return (
     <div>
       <div className="h-10" ref={contactRef}></div>
       <motion.div
         className="overflow-x-hidden"
-        initial={{ opacity: 0, scale: 0.5 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
         viewport={{ once: true }}
       >
-        <Card
-          className="flex flex-col gap-5 m-auto w-full max-w-3xl px-5 sm:px-20 py-10 pt-20 mb-28 relative"
+        <Box
+          className="flex flex-col gap-5 m-auto w-full max-w-3xl px-0 py-10 pt-20 mb-28 relative"
           style={{ borderRadius: "24px" }}
-          elevation={2}
         >
-          <div className="flex items-center w-full justify-center bg-gradientRocketWay absolute left-0 top-0 p-2 gap-3">
+          <div className="flex items-center w-full justify-center bg-gradientRocketWay absolute left-0 top-0 p-2 gap-3 rounded-t-2xl">
             <img src={Logo} className=" w-10 md:w-8" />
             <div className="text-xl md:text-md tracking-widest">
               Rocket Team
@@ -124,9 +81,10 @@ export const Contact = ({ contactRef }) => {
           <input
             type="text"
             placeholder={t("ContactName")}
+            ref={nameRef}
             value={name || ""}
             onChange={(event) => setName(event?.target?.value)}
-            className="text-left text-base p-2 rounded-md border-black border-opacity-20 border-2 focus:outline-none focus:border-primary focus:border-opacity-40 "
+            className="text-left text-base p-2 rounded-md border-black border-opacity-20 border focus:outline-none focus:border-primary focus:border-opacity-20 "
           />
           <input
             type="text"
@@ -134,12 +92,12 @@ export const Contact = ({ contactRef }) => {
             value={email || ""}
             ref={emailInputRef}
             onChange={(event) => setEmail(event?.target?.value)}
-            className="text-left p-2 rounded-md border-black border-opacity-20 border-2 focus:outline-none focus:border-primary focus:border-opacity-40  "
+            className="text-left p-2 rounded-md border-black border-opacity-20 border focus:outline-none focus:border-primary focus:border-opacity-20  "
           />
 
           <PhoneInput
             inputStyle={{
-              border: "2px solid rgba(0,0,0,.2)",
+              border: "1px solid rgba(0,0,0,.2)",
               width: "100%",
               outline: "none",
               textAlign: "left",
@@ -151,18 +109,18 @@ export const Contact = ({ contactRef }) => {
             }}
             buttonStyle={{
               background: "white",
-              border: "2px solid rgba(0,0,0,.2)",
+              border: "1px solid rgba(0,0,0,.2)",
             }}
             inputProps={{
               onFocus: (e) => {
-                e.target.style.border = "2px solid rgba(235, 80, 235, 0.4)";
+                e.target.style.border = "1px solid rgba(235, 80, 235, 0.4)";
               },
               onBlur: (e) => {
-                e.target.style.border = "2px solid rgba(0, 0, 0, 0.2)";
+                e.target.style.border = "1px solid rgba(0, 0, 0, 0.2)";
               },
             }}
             containerStyle={{ textAlign: "left" }}
-            country={getCountryByLanguage(currentLanguage)}
+            country={i18n.language !== "en" ? i18n.language : "ee"}
             value={phone}
             onChange={(phone) => setPhone(phone)}
             regions={"europe"}
@@ -170,15 +128,14 @@ export const Contact = ({ contactRef }) => {
           />
           <textarea
             type="text"
+            ref={messageRef}
             placeholder={t("ContactMessage")}
             value={message || ""}
             onChange={(event) => setMessage(event?.target?.value)}
-            className="text-left h-40 resize-none p-2 rounded-md border-black border-opacity-20 border-2 focus:outline-none focus:border-primary focus:border-opacity-40 "
+            className="text-left h-40 resize-none p-2 rounded-md border-black border border-opacity-20 focus:outline-none focus:border-primary focus:border-opacity-20 "
           />
-          {emailError ? (
-            <div className="text-red-500 h-5 text-center">
-              {nameError || emailError || phoneError || messageError}
-            </div>
+          {error ? (
+            <div className="text-red-500 h-5 text-center">{error}</div>
           ) : (
             <div className="h-5"></div>
           )}
@@ -186,7 +143,7 @@ export const Contact = ({ contactRef }) => {
           <button onClick={handleSubmission} className="m-auto py-1">
             {t("ContactSubmitBTN")}
           </button>
-        </Card>
+        </Box>
       </motion.div>
     </div>
   );

@@ -46,7 +46,7 @@ export const Hero = ({ contactRef }) => {
         }}
       />
       <h1 className="text-center">
-        Create your
+        {t("heroTitle")}
         <br />
         <TypeAnimation
           sequence={typewriterTexts}
@@ -55,7 +55,6 @@ export const Hero = ({ contactRef }) => {
           cursor={false}
         />
         <br />
-        {t("heroTitle2")}
       </h1>
       <p style={{ maxWidth: "34ch", textAlign: "center" }}>
         {t("heroSubtitle")}

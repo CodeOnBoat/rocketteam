@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import BGimage from "../assets/images/footer/BGimage.png";
+import BGimage from "../assets/images/footer/BGimage.webp";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
 
 export const Footer = ({ contactRef, servicesRef, rocketWayRef }) => {
