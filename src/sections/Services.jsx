@@ -33,7 +33,7 @@ export const Services = ({ servicesRef }) => {
             transition={{ duration: 0.3, delay: index * 0.1 }}
             key={index}
             viewport={{ once: true }}
-            className=" bg-white rounded-lg shadow-md m-2 md:w-4/5 lg:w-full "
+            className=" bg-white rounded-lg shadow-md m-2 md:w-4/5 lg:w-full z-10 "
           >
             <div className="flex items-center justify-between m-2">
               <label
