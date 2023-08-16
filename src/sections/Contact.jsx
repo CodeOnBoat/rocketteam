@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { WhyUs } from "./WhyUs";
 
 export const Contact = ({ contactRef }) => {
   const { t, i18n } = useTranslation();
@@ -77,6 +78,9 @@ export const Contact = ({ contactRef }) => {
               Rocket Team
             </div>
           </div>
+          <label>Here to Help you</label>
+          <WhyUs />
+
           <h2 className="text-center">{t("ContactUsTitle")}</h2>
           <input
             type="text"
