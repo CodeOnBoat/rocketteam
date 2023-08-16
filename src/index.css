@@ -62,25 +62,52 @@ header {
 }
 
 button {
+  text-align: center;
   border-radius: 12px;
-  background: linear-gradient(to right, #000000, #000000, #322a2a, #554c55);
+  background: #000000; /* Solid black color */
   color: white;
   font-family: "SequelSansMediumHead";
   padding: 0.7em 1em;
   font-size: x-large;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75); /* Similar shadow to button 3 */
+  cursor: pointer;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   background-size: 300% 100%;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #000000,
+    #1a1a1a,
+    #333333,
+    #4d4d4d
+  ); /* Shades of grey */
 }
 
 button:hover {
-  background-color: #1a1a1a;
-  transform: translateY(-2px);
   background-position: 100% 0;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  background-image: linear-gradient(
+    to right,
+    #4d4d4d,
+    #333333,
+    #1a1a1a,
+    #000000
+  ); /* Reversed shades of grey for hover effect */
+}
+
+button:active {
+  background-image: linear-gradient(
+    to right,
+    #000000,
+    #1a1a1a,
+    #333333,
+    #4d4d4d
+  ); /* Shades of grey */
 }
 
 * {
@@ -140,4 +167,7 @@ body {
 
 .country {
   text-align: left;
+}
+.react-tel-input .selected-flag {
+  border: none;
 }

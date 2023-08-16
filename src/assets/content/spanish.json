@@ -5,6 +5,10 @@
   "development": "Desarrollo",
   "faq": "FAQ",
   "contact": "Contacto",
+  "heroTitleSoftware": "xxx",
+  "heroTitleWebsites": "xxx",
+  "heroTitlePhoneApps": "xxx",
+  "heroTitleChatbots": "xxx",
   "heroTitle": "Creamos tu",
   "heroSubtitle": "Soluciones Digitales todo en uno para ayudar a su negocio a destacar en la era digital.",
   "heroCTA": "Comienza tu viaje",
@@ -39,5 +43,9 @@
   "ContactEmail": "Email",
   "ContactPhone": "Numbero mobil",
   "ContactMessage": "Mensaje",
-  "ContactSubmitBTN": "Enviar"
+  "ContactSubmitBTN": "Enviar",
+  "YourName": "Tu nombre",
+  "YourEmail": "Tu dirección de correo electrónico",
+  "YourPhone": "Tu número de teléfono",
+  "YourMessage": "Tu mensaje"
 }

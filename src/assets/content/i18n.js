@@ -4,11 +4,13 @@ import { initReactI18next } from "react-i18next";
 import enTranslation from "./english.json";
 import itTranslation from "./italian.json";
 import esTranslation from "./spanish.json";
+import seTranslation from "./swedish.json";
 
 const resources = {
   en: { translation: enTranslation },
   it: { translation: itTranslation },
   es: { translation: esTranslation },
+  se: { translation: seTranslation },
 };
 
 i18n.use(initReactI18next).init({
