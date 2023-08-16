@@ -120,13 +120,13 @@ body {
 
 @keyframes colorRotate {
   0% {
-    filter: hue-rotate(0deg) brightness(1) saturate(1);
+    filter: hue-rotate(0deg) brightness(1) saturate(1) contrast(1);
   }
   50% {
-    filter: hue-rotate(360deg) brightness(1.2) saturate(1.2);
+    filter: hue-rotate(360deg) brightness(1.2) saturate(1.2) contrast(1.2);
   }
   100% {
-    filter: hue-rotate(0deg) brightness(1) saturate(1);
+    filter: hue-rotate(0deg) brightness(1) saturate(1) contrast(1);
   }
 }
 
@@ -140,4 +140,35 @@ body {
 
 .country {
   text-align: left;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit {
+  height: 1160px;
+  width: 1160px;
+  /* border: 1px solid #fff; */
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  animation: spin 45s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rocket {
+  border-radius: 50% 50% 0 0;
+  position: relative;
+  left: -44px;
+  z-index: -1;
+  top: 460px;
 }

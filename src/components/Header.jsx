@@ -28,7 +28,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
         <img src={Logo} className=" w-14 md:w-12" />
         <div className="text-3xl md:text-2xl tracking-widest">Rocket Team</div>
       </div>
-      <div className="flex-grow justify-end items-center gap-10 hidden lg:flex">
+      <div className="flex-grow justify-end items-center gap-10 hidden lg:flex pr-5 mr-12">
         <label
           className="hover:-translate-y-0.5 cursor-pointer duration-100"
           onClick={() => {
@@ -53,25 +53,25 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
         >
           {t("contact")}
         </button>
-        <div>
-          <img
-            src={
-              language === "es"
-                ? SpainIcon
-                : language === "en"
-                ? UKIcon
-                : ItalyIcon
-            }
-            className="w-8 cursor-pointer rounded-xl"
-            onClick={() => setShowFlags(!showFlags)}
-          />
-        </div>
+      </div>
+      <div className="absolute right-4 ml-5 lg:ml-0 z-20">
+        <img
+          src={
+            language === "es"
+              ? SpainIcon
+              : language === "en"
+              ? UKIcon
+              : ItalyIcon
+          }
+          className="w-8 cursor-pointer"
+          onClick={() => setShowFlags(!showFlags)}
+        />
         {showFlags && (
-          <div className="absolute top-0 right-0 flex flex-col mt-12 mr-4">
+          <div className="absolute right-0 flex flex-col top-8 w-full">
             {language !== "es" && (
               <motion.img
                 src={SpainIcon}
-                className="w-8 cursor-pointer rounded-xl"
+                className="w-8 cursor-pointer"
                 onClick={() => changeLanguage("es")}
                 value="es"
                 initial={{ opacity: 0, y: -10 }}
@@ -81,7 +81,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
             {language !== "en" && (
               <motion.img
                 src={UKIcon}
-                className="w-8 cursor-pointer rounded-xl"
+                className="w-8 cursor-pointer"
                 onClick={() => changeLanguage("en")}
                 value="en"
                 initial={{ opacity: 0, y: -10 }}
@@ -91,7 +91,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
             {language !== "it" && (
               <motion.img
                 src={ItalyIcon}
-                className="w-8 cursor-pointer rounded-xl"
+                className="w-8 cursor-pointer"
                 onClick={() => changeLanguage("it")}
                 value="it"
                 initial={{ opacity: 0, y: -10 }}
