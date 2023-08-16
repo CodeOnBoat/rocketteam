@@ -23,7 +23,10 @@ const App = () => {
   }, [i18n]);
 
   return (
-    <>
+    <div
+      className="overflow-x-hidden"
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+    >
       <Header
         servicesRef={servicesRef}
         rocketWayRef={rocketWayRef}
@@ -39,7 +42,7 @@ const App = () => {
         rocketWayRef={rocketWayRef}
         servicesRef={servicesRef}
       />
-    </>
+    </div>
   );
 };
 
