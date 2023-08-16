@@ -176,15 +176,15 @@ body {
 }
 
 .orbit {
-  height: 1160px;
-  width: 1160px;
+  height: 58vw;
+  width: 58vw;
   /* border: 1px solid #fff; */
   border-radius: 50%;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  animation: spin 45s infinite linear;
+  animation: spin 10s infinite linear;
 }
 @keyframes spin {
   100% {
@@ -195,7 +195,8 @@ body {
 .rocket {
   border-radius: 50% 50% 0 0;
   position: relative;
-  left: -44px;
+  left: -2.2vw;
   z-index: -1;
-  top: 460px;
+  top: 22vw;
+  opacity: .6;
 }
