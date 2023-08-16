@@ -3,13 +3,13 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        x: "90rem",
+        x: "75rem",
       },
 
       colors: {
         primary: "#EB50EB",
         secondary: "#50EBD3",
-        secondaryLight:"rgba(80,235, 211,.1)",
+        secondaryLight: "rgba(80,235, 211,.1)",
       },
       backgroundImage: {
         gradientRocketWay:
