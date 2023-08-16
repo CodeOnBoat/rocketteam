@@ -3,6 +3,7 @@ import Logo from "../assets/images/header/rocketTeamLogo.png";
 import { useTranslation } from "react-i18next";
 import ItalyIcon from "../assets/images/header/italy.png";
 import SpainIcon from "../assets/images/header/spain.png";
+import SwedishIcon from "../assets/images/header/sweden.png";
 import UKIcon from "../assets/images/header/england.png";
 import { motion } from "framer-motion";
 
@@ -61,9 +62,11 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
               ? SpainIcon
               : language === "en"
               ? UKIcon
-              : ItalyIcon
+              : language == "it"
+              ? ItalyIcon
+              : SwedishIcon
           }
-          className="w-8 cursor-pointer"
+          className="w-8 cursor-pointer rounded-xl"
           onClick={() => setShowFlags(!showFlags)}
         />
         {showFlags && (
@@ -94,6 +97,16 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
                 className="w-8 cursor-pointer"
                 onClick={() => changeLanguage("it")}
                 value="it"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+              />
+            )}
+            {language !== "se" && (
+              <motion.img
+                src={SwedishIcon}
+                className="w-8 cursor-pointer rounded-xl"
+                onClick={() => changeLanguage("se")}
+                value="se"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
               />

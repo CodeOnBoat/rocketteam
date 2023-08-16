@@ -5,8 +5,18 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
 export const Hero = ({ contactRef }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [scroll, setScroll] = useState(0);
+  const [typewriterTexts, setTypewriterTexts] = useState([
+    t("heroTitleSoftware"),
+    1500,
+    t("heroTitleWebsites"),
+    1500,
+    t("heroTitlePhoneApps"),
+    1500,
+    t("heroTitleChatbots"),
+    1500,
+  ]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -17,16 +27,22 @@ export const Hero = ({ contactRef }) => {
     };
   }, []);
 
-  const typewriterTexts = [
-    t("heroTitleSoftware"),
-    1500,
-    t("heroTitleWebsites"),
-    1500,
-    t("heroTitlePhoneApps"),
-    1500,
-    t("heroTitleChatbots"),
-    1500,
-  ];
+  useEffect(() => {
+    console.log(i18n.language);
+    const tempTexts = [
+      t("heroTitleSoftware"),
+      1500,
+      t("heroTitleWebsites"),
+      1500,
+      t("heroTitlePhoneApps"),
+      1500,
+      t("heroTitleChatbots"),
+      1500,
+    ];
+    setTypewriterTexts(tempTexts);
+    console.log(typewriterTexts);
+  }, [i18n.language]);
+
   return (
     <motion.div
       className="flex flex-col justify-center items-center gap-12 mt-5 sm:mt-20"
@@ -49,6 +65,7 @@ export const Hero = ({ contactRef }) => {
         {t("heroTitle")}
         <br />
         <TypeAnimation
+          key={typewriterTexts[0]}
           sequence={typewriterTexts}
           speed={30}
           repeat={Infinity}

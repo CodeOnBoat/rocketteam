@@ -45,5 +45,9 @@
   "ContactEmail": "Email",
   "ContactPhone": "Phone Number",
   "ContactMessage": "Message",
-  "ContactSubmitBTN": "Submit"
+  "ContactSubmitBTN": "Submit",
+  "YourName": "Your name",
+  "YourEmail": "Your email address",
+  "YourPhone": "Your phone number",
+  "YourMessage": "Your message"
 }

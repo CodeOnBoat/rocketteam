@@ -79,75 +79,88 @@ export const Contact = ({ contactRef }) => {
         <div className="flex items-top justify-evenly">
           <WhyUs />
           <div
-            className="flex flex-col gap-5 w-full lg:w-1/2 max-w-3xl py-10 pt-20"
+            className="flex flex-col gap-5 w-full lg:w-2/5 max-w-3xl py-10 pt-20"
             style={{ borderRadius: "24px" }}
           >
             <h2 className="text-center">{t("ContactUsTitle")}</h2>
-            <input
-              type="text"
-              placeholder={t("ContactName")}
-              ref={nameRef}
-              value={name || ""}
-              onChange={(event) => setName(event?.target?.value)}
-              className="text-left text-base p-2 rounded-md border-black border-opacity-20 border focus:outline-none focus:border-primary focus:border-opacity-20 "
-            />
-            <input
-              type="text"
-              placeholder={t("ContactEmail")}
-              value={email || ""}
-              ref={emailInputRef}
-              onChange={(event) => setEmail(event?.target?.value)}
-              className="text-left p-2 rounded-md border-black border-opacity-20 border focus:outline-none focus:border-primary focus:border-opacity-20  "
-            />
-
-            <PhoneInput
-              inputStyle={{
-                border: "1px solid rgba(0,0,0,.2)",
-                width: "100%",
-                outline: "none",
-                textAlign: "left",
-                paddingTop: ".5em",
-                paddingBottom: ".5em",
-                lineHeight: "24px",
-                fontSize: "16px",
-                height: "fit-content",
-              }}
-              buttonStyle={{
-                background: "white",
-                border: "1px solid rgba(0,0,0,.2)",
-              }}
-              inputProps={{
-                onFocus: (e) => {
-                  e.target.style.border = "1px solid rgba(235, 80, 235, 0.4)";
-                },
-                onBlur: (e) => {
-                  e.target.style.border = "1px solid rgba(0, 0, 0, 0.2)";
-                },
-              }}
-              containerStyle={{ textAlign: "left" }}
-              country={i18n.language !== "en" ? i18n.language : "ee"}
-              value={phone}
-              onChange={(phone) => setPhone(phone)}
-              regions={"europe"}
-              preferredCountries={["it", "es", "nl", "se"]}
-            />
-            <textarea
-              type="text"
-              ref={messageRef}
-              placeholder={t("ContactMessage")}
-              value={message || ""}
-              onChange={(event) => setMessage(event?.target?.value)}
-              className="text-left h-40 resize-none p-2 rounded-md border-black border border-opacity-20 focus:outline-none focus:border-primary focus:border-opacity-20 "
-            />
+            <div className="flex-col">
+              <div>{t("YourName")}*</div>
+              <input
+                type="text"
+                placeholder={t("ContactName") + "*"}
+                ref={nameRef}
+                value={name || ""}
+                onChange={(event) => setName(event?.target?.value)}
+                className="w-full mt-1 text-left text-base p-2 rounded-md border-black border-opacity-20 border focus:outline-none focus:border-primary focus:border-opacity-60 "
+              />
+            </div>
+            <div className="flex-col">
+              <div>{t("YourEmail")}*</div>
+              <input
+                type="text"
+                placeholder={t("ContactEmail") + "*"}
+                value={email || ""}
+                ref={emailInputRef}
+                onChange={(event) => setEmail(event?.target?.value)}
+                className="w-full mt-1 text-left p-2 rounded-md border-black border-opacity-20 border focus:outline-none focus:border-primary focus:border-opacity-60  "
+              />
+            </div>
+            <div className="flex-col">
+              <div>{t("YourPhone")}*</div>
+              <PhoneInput
+                className="mt-1"
+                placeholder={t("ContactPhone") + "*"}
+                autocompleteSearch={true}
+                inputStyle={{
+                  border: "1px solid rgba(0,0,0,.2)",
+                  width: "100%",
+                  outline: "none",
+                  textAlign: "left",
+                  paddingTop: ".5em",
+                  paddingBottom: ".5em",
+                  lineHeight: "24px",
+                  fontSize: "16px",
+                  height: "fit-content",
+                }}
+                buttonStyle={{
+                  background: "white",
+                  border: "1px solid rgba(0,0,0,.2)",
+                }}
+                inputProps={{
+                  onFocus: (e) => {
+                    e.target.style.border = "1px solid rgba(235, 80, 235, 0.6)";
+                  },
+                  onBlur: (e) => {
+                    e.target.style.border = "1px solid rgba(0, 0, 0, 0.2)";
+                  },
+                }}
+                containerStyle={{ textAlign: "left" }}
+                country={i18n.language !== "en" ? i18n.language : "ee"}
+                value={phone || ""}
+                onChange={(phone) => setPhone(phone)}
+                regions={"europe"}
+                preferredCountries={["it", "es", "nl", "se"]}
+              />
+            </div>
+            <div className="flex-col w-full">
+              <div>{t("YourMessage")}*</div>
+              <textarea
+                type="text"
+                ref={messageRef}
+                placeholder={t("ContactMessage") + "*"}
+                value={message || ""}
+                onChange={(event) => setMessage(event?.target?.value)}
+                className="w-full mt-1 text-left h-40 resize-none p-2 rounded-md border-black border border-opacity-20 focus:outline-none focus:border-primary focus:border-opacity-60 "
+              />
+            </div>
+            <button onClick={handleSubmission} className=" w-full  py-1">
+              {t("ContactSubmitBTN")}
+            </button>
             {error ? (
               <div className="text-red-500 h-5 text-center">{error}</div>
             ) : (
               <div className="h-5"></div>
             )}
-
-            <button onClick={handleSubmission} className="m-auto py-1">
-              {t("ContactSubmitBTN")}
-            </button>
           </div>
         </div>
       </motion.div>
