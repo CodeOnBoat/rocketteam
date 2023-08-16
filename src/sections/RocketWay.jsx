@@ -14,7 +14,11 @@ export const RocketWay = ({ rocketWayRef }) => {
         <h2 className="text-center">
           <div className="flex w-full justify-center sm:justify-start items-center gap-2">
             {t("rocketWayTitle")}
-            <img src={Logo} className="w-10" />
+            <div className="absolute">
+              <div className="orbit w-12 relative rounded">
+                <img src={Logo} className="w-10 absolute right-0 rocket" />
+              </div>
+            </div>
           </div>
         </h2>
         <p>{t("rocketWaySubtitle")}</p>
@@ -23,7 +27,7 @@ export const RocketWay = ({ rocketWayRef }) => {
             {rocketWay.map((way, index) => (
               <motion.div
                 viewport={{ once: true }}
-                className="shadow-sm shadow-white flex gap-5 mb-4 items-center bg-gradientRocketWay rounded-full p-2 py-3 colorRotate"
+                className="shadow-sm shadow-white flex gap-5 mb-4 items-center bg-gradientRocketWay rounded-full p-2 py-3 colorRotate z-10 backdrop-blur-3xl"
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}

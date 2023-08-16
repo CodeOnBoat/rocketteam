@@ -28,7 +28,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
         <img src={Logo} className=" w-14 md:w-12" />
         <div className="text-3xl md:text-2xl tracking-widest">Rocket Team</div>
       </div>
-      <div className="flex-grow justify-end items-center gap-10 hidden lg:flex pr-5 mr-7">
+      <div className="flex-grow justify-end items-center gap-10 hidden lg:flex pr-5 mr-12">
         <label
           className="hover:-translate-y-0.5 cursor-pointer duration-100"
           onClick={() => {
@@ -63,15 +63,15 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
               ? UKIcon
               : ItalyIcon
           }
-          className="w-14 lg:w-8 cursor-pointer rounded-xl"
+          className="w-8 cursor-pointer"
           onClick={() => setShowFlags(!showFlags)}
         />
         {showFlags && (
-          <div className="absolute right-0 flex flex-col top-14 lg:top-8 w-full">
+          <div className="absolute right-0 flex flex-col top-8 w-full">
             {language !== "es" && (
               <motion.img
                 src={SpainIcon}
-                className="w-14 lg:w-8 cursor-pointer rounded-xl"
+                className="w-8 cursor-pointer"
                 onClick={() => changeLanguage("es")}
                 value="es"
                 initial={{ opacity: 0, y: -10 }}
@@ -81,7 +81,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
             {language !== "en" && (
               <motion.img
                 src={UKIcon}
-                className="w-14 lg:w-8 cursor-pointer rounded-xl"
+                className="w-8 cursor-pointer"
                 onClick={() => changeLanguage("en")}
                 value="en"
                 initial={{ opacity: 0, y: -10 }}
@@ -91,7 +91,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
             {language !== "it" && (
               <motion.img
                 src={ItalyIcon}
-                className="w-14 lg:w-8 cursor-pointer rounded-xl"
+                className="w-8 cursor-pointer"
                 onClick={() => changeLanguage("it")}
                 value="it"
                 initial={{ opacity: 0, y: -10 }}
