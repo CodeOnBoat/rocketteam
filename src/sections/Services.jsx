@@ -29,16 +29,17 @@ export const Services = ({ servicesRef }) => {
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="flex flex-col justify-center items-center gap-2 bg-white py-3 rounded-2xl shadow-xl w-80 m-auto"
             key={index}
             viewport={{ once: true }}
           >
-            <label>{t(service.text)}</label>
-            <img
-              className="w-28 drop-shadow-2xl"
-              src={service.image}
-              alt={service.alt}
-            />
+            <div className="flex items-center">
+              <div className="">{t(service.text)}</div>
+              <img
+                className="w-20 drop-shadow-2xl"
+                src={service.image}
+                alt={service.alt}
+              />
+            </div>
           </motion.div>
         ))}
       </div>
