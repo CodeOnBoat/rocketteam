@@ -23,7 +23,7 @@ export const RocketWay = ({ rocketWayRef }) => {
             {rocketWay.map((way, index) => (
               <motion.div
                 viewport={{ once: true }}
-                className="shadow-sm shadow-white flex gap-5 mb-4 items-center bg-gradientRocketWay rounded-full p-2 py-3 "
+                className="shadow-sm shadow-white flex gap-5 mb-4 items-center bg-gradientRocketWay rounded-full p-2 py-3 colorRotate"
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
