@@ -36,7 +36,12 @@ export const RocketWay = ({ rocketWayRef }) => {
                     {index + 1}
                   </label>
                 </div>
-                <label className="text-left">{t(way)}</label>
+                <label
+                  className="text-left"
+                  style={{ fontFamily: "SequelSansMediumHead" }}
+                >
+                  {t(way)}
+                </label>
               </motion.div>
             ))}
           </motion.ul>
