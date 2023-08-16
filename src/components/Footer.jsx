@@ -21,8 +21,24 @@ export const Footer = ({ contactRef, servicesRef, rocketWayRef }) => {
             </div>
             <div className="flex flex-col gap-5 ">
               <div>Tallin, Estonia</div>
-              <a>hello@rocket-team.space</a>
-              <div>+31 5855937563</div>
+              <div>
+                <a
+                  href="mailto:hello@rocket-team.space"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" border-b border-black border-opacity-50 "
+                >
+                  hello@rocket-team.space
+                </a>
+              </div>
+              <div>
+                <a
+                  href="tel:+315855937563"
+                  className=" border-b border-black border-opacity-50"
+                >
+                  +31 5855937563
+                </a>
+              </div>
             </div>
           </div>
           <div className="flex flex-col gap-5  text-center sm:text-start">
