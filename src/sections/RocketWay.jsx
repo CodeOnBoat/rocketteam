@@ -28,7 +28,7 @@ export const RocketWay = ({ rocketWayRef }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                <div className="border border-white bg-white bg-opacity-50 p-3 rounded-full flex justify-center items-center h-10 w-10">
+                <div className="border border-white bg-white bg-opacity-50 p-3 rounded-full flex justify-center items-center h-10 w-10 ">
                   <label
                     className="opacity-70"
                     style={{ fontFamily: "SequelSansHeavyHead" }}
