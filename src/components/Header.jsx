@@ -14,6 +14,7 @@ export const Header = ({ servicesRef, rocketWayRef, contactRef }) => {
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
     setLanguage(language);
+    localStorage.setItem("lang", language);
     setShowFlags(false);
   };
 
