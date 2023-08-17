@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import BGImage from "../assets/images/hero/heroWave.webp";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { Meteorites3D } from "../components/Meteorites3D";
 
 export const Hero = ({ contactRef }) => {
   const { t, i18n } = useTranslation();
@@ -61,6 +62,7 @@ export const Hero = ({ contactRef }) => {
           transform: `translateY(${scroll * 0.2}px)`,
         }}
       />
+      <Meteorites3D />
       <h1 className="text-center">
         {t("heroTitle")}
         <br />
