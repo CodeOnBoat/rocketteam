@@ -62,7 +62,6 @@ export const Hero = ({ contactRef }) => {
           transform: `translateY(${scroll * 0.2}px)`,
         }}
       />
-      <Meteorites3D />
       <h1 className="text-center">
         {t("heroTitle")}
         <br />
