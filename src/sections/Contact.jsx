@@ -59,11 +59,7 @@ export const Contact = ({ contactRef }) => {
   };
 
   return (
-    <Card
-      className="px-4 relative mb-28"
-      sx={{ borderRadius: "24px" }}
-      elevation={6}
-    >
+    <div className="px-4 relative mb-28 bg-white rounded-3xl shadow-md">
       <div className="h-10" ref={contactRef}></div>
       <motion.div
         className="overflow-x-hidden"
@@ -72,7 +68,7 @@ export const Contact = ({ contactRef }) => {
         transition={{ duration: 0.3 }}
         viewport={{ once: true }}
       >
-        <div className="flex items-center w-full justify-center bg-gradientRocketWay absolute left-0 top-0 p-2 gap-3 colorRotate">
+        <div className="flex items-center w-full justify-center bg-gradientRocketWay absolute left-0 top-0 p-2 gap-3 rounded-t-3xl colorRotate">
           <img src={Logo} className=" w-10 md:w-8" />
           <div className="text-xl md:text-md tracking-widest">Rocket Team</div>
         </div>
@@ -84,10 +80,10 @@ export const Contact = ({ contactRef }) => {
           >
             <h2 className="text-center">{t("ContactUsTitle")}</h2>
             <div className="flex-col">
-              <div>{t("YourName")}*</div>
+              <div className="text-left">{t("YourName")}*</div>
               <input
                 type="text"
-                placeholder={t("ContactName") + "*"}
+                placeholder={t("ContactName")}
                 ref={nameRef}
                 value={name || ""}
                 onChange={(event) => setName(event?.target?.value)}
@@ -95,10 +91,10 @@ export const Contact = ({ contactRef }) => {
               />
             </div>
             <div className="flex-col">
-              <div>{t("YourEmail")}*</div>
+              <div className="text-left">{t("YourEmail")}*</div>
               <input
                 type="text"
-                placeholder={t("ContactEmail") + "*"}
+                placeholder={t("ContactEmail")}
                 value={email || ""}
                 ref={emailInputRef}
                 onChange={(event) => setEmail(event?.target?.value)}
@@ -106,10 +102,10 @@ export const Contact = ({ contactRef }) => {
               />
             </div>
             <div className="flex-col">
-              <div>{t("YourPhone")}*</div>
+              <div className="text-left">{t("YourPhone")}*</div>
               <PhoneInput
                 className="mt-1"
-                placeholder={t("ContactPhone") + "*"}
+                placeholder={t("ContactPhone")}
                 autocompleteSearch={true}
                 inputStyle={{
                   border: "1px solid rgba(0,0,0,.2)",
@@ -143,11 +139,11 @@ export const Contact = ({ contactRef }) => {
               />
             </div>
             <div className="flex-col w-full">
-              <div>{t("YourMessage")}*</div>
+              <div className="text-left">{t("YourMessage")}*</div>
               <textarea
                 type="text"
                 ref={messageRef}
-                placeholder={t("ContactMessage") + "*"}
+                placeholder={t("ContactMessage")}
                 value={message || ""}
                 onChange={(event) => setMessage(event?.target?.value)}
                 className="w-full mt-1 text-left h-40 resize-none p-2 rounded-md border-black border border-opacity-20 focus:outline-none focus:border-primary focus:border-opacity-60 "
@@ -164,6 +160,6 @@ export const Contact = ({ contactRef }) => {
           </div>
         </div>
       </motion.div>
-    </Card>
+    </div>
   );
 };

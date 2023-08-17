@@ -63,7 +63,7 @@ header {
 
 button {
   text-align: center;
-  border-radius: 12px;
+  border-radius: 24px;
   background: #000000; /* Solid black color */
   color: white;
   font-family: "SequelSansMediumHead";
@@ -198,5 +198,16 @@ body {
   left: -2.2vw;
   z-index: -1;
   top: 22vw;
-  opacity: .6;
+  opacity: 0.6;
+}
+.rocket-way {
+  transition: all 0.3s;
+}
+.rocket-way:hover {
+  transform: none;
+}
+@media screen and (width > 1200px) {
+  .rocket-way:hover {
+    transform: scale(1.05) !important;
+  }
 }
