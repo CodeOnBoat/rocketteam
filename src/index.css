@@ -198,5 +198,6 @@ body {
   left: -2.2vw;
   z-index: -1;
   top: 22vw;
-  opacity: .6;
+  animation: colorRotate 10s infinite;
+  opacity: 0.6;
 }
