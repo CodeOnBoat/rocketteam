@@ -12,10 +12,16 @@ export const Services = ({ servicesRef }) => {
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden" ref={servicesRef}>
       <div className="h-14 sm:h-0"></div>
-      <img
-        src={BGimage}
-        className="-z-10 absolute min-w-screen object-cover left-0 h-x sm:object-fill  lg:h-4/5 sm:w-full wave"
-      />
+      <div className="">
+        <img
+          src={BGimage}
+          className="absolute w-screen -z-10 h-3/4 md:h-full lg:h-4/6 wave left-0  opacity-50 lg:opacity-100 "
+        />
+        <img
+          src={BGimage}
+          className="absolute w-screen -z-10 h-x sm:h-5/6  wave left-0 mt-96  lg:hidden opacity-50"
+        />
+      </div>
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -33,7 +39,7 @@ export const Services = ({ servicesRef }) => {
             transition={{ duration: 0.3, delay: index * 0.1 }}
             key={index}
             viewport={{ once: true }}
-            className=" bg-white rounded-lg shadow-md m-2 md:w-4/5 lg:w-full z-10 "
+            className=" bg-white rounded-3xl  shadow-md m-2 md:w-4/5 lg:w-full z-10 "
           >
             <div className="flex items-center justify-between m-2">
               <label
@@ -52,7 +58,7 @@ export const Services = ({ servicesRef }) => {
               {service.features.map((feature, index) => (
                 <div className="flex gap-4 mb-5">
                   <img src={Tick} alt="" className="w-5 h-5 ml-3" />
-                  <div>{t(feature)}</div>
+                  <div className="text-left">{t(feature)}</div>
                 </div>
               ))}
             </div>
