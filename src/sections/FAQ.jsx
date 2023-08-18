@@ -27,7 +27,6 @@ export const FAQ = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              hellod
               <Typography>{question.question}</Typography>
             </AccordionSummary>
             <AccordionDetails>
