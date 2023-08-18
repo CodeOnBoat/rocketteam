@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { rocketWay } from "../assets/content/rocketWay";
-import Logo from "../assets/images/header/rocketTeamLogo.png";
+import Logo from "../assets/images/rocket.png";
 import { motion } from "framer-motion";
 
 export const RocketWay = ({ rocketWayRef }) => {
@@ -42,7 +42,7 @@ export const RocketWay = ({ rocketWayRef }) => {
                 </label>
               </div>
               <label
-                className="text-left text-sm sm:text-xl"
+                className="text-left text-sm md:text-xl"
                 style={{ fontFamily: "SequelSansMediumHead" }}
               >
                 {t(way)}
