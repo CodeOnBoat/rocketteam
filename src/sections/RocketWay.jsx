@@ -42,7 +42,7 @@ export const RocketWay = ({ rocketWayRef }) => {
                 </label>
               </div>
               <label
-                className="text-left text-sm md:text-md"
+                className="text-left text-sm sm:text-xl"
                 style={{ fontFamily: "SequelSansMediumHead" }}
               >
                 {t(way)}
