@@ -176,8 +176,8 @@ body {
 }
 
 .orbit {
-  height: 58vw;
-  width: 58vw;
+  height: 290px;
+  width: 290px;
   /* border: 1px solid #fff; */
   border-radius: 50%;
   left: 0;
@@ -187,20 +187,44 @@ body {
   animation: spin 10s infinite linear;
 }
 @keyframes spin {
+  0% {
+    filter: grayscale(0%);
+    opacity: 0.1;
+  }
+  5% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+    filter: grayscale(0%);
+  }
+  55% {
+    opacity: 1;
+    filter: grayscale(100%);
+  }
+  93% {
+    opacity: 1;
+  }
   100% {
     transform: rotate(360deg);
+    opacity: 0.1;
+    filter: grayscale(100%);
   }
 }
 
 .rocket {
   border-radius: 50% 50% 0 0;
   position: relative;
-  left: -2.2vw;
+  left: -11px;
   z-index: -1;
-  top: 22vw;
+  top: 111px;
   animation: colorRotate 10s infinite;
   opacity: 0.6;
   opacity: 0.6;
+  filter: drop-shadow(0 0 10px #fff);
 }
 .rocket-way {
   transition: all 0.3s;
@@ -210,6 +234,6 @@ body {
 }
 @media screen and (width > 1200px) {
   .rocket-way:hover {
-    transform: scale(1.05) !important;
+    transform: scale(1.01) !important;
   }
 }

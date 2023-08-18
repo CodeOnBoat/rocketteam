@@ -8,11 +8,11 @@ export const RocketWay = ({ rocketWayRef }) => {
   const { t } = useTranslation();
 
   return (
-    <div>
-      <div className="h-2" ref={rocketWayRef}></div>
+    <div className="z-10">
+      <div className="h-2 z-10" ref={rocketWayRef}></div>
 
       <h2 className="text-center">
-        <div className="flex w-full justify-center sm:justify-start items-center gap-2">
+        <div className="flex w-full justify-center sm:justify-start items-center gap-2 z-10">
           {t("rocketWayTitle")}
 
           <div className="absolute">
@@ -42,7 +42,7 @@ export const RocketWay = ({ rocketWayRef }) => {
                 </label>
               </div>
               <label
-                className="text-left"
+                className="text-left text-sm md:text-md"
                 style={{ fontFamily: "SequelSansMediumHead" }}
               >
                 {t(way)}
