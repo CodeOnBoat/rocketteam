@@ -22,7 +22,7 @@ export const Services = ({ servicesRef }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-10 overflow-x-hidden" ref={servicesRef}>
+    <div className="flex flex-col gap-10 overflow-hidden" ref={servicesRef}>
       <div className="h-14 sm:h-0"></div>
       <div className="">
         <img

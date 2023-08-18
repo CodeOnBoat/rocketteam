@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { rocketWay } from "../assets/content/rocketWay";
-import Logo from "../assets/images/rocket.png";
+import Logo from "../assets/images/header/rocketTeamLogo.png";
 import { motion } from "framer-motion";
 
 export const RocketWay = ({ rocketWayRef }) => {
