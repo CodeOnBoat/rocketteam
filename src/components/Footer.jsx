@@ -8,7 +8,7 @@ export const Footer = ({ contactRef, servicesRef, rocketWayRef }) => {
     <>
       <img
         src={BGimage}
-        className="absolute h-screen w-screen -z-10 mt-10 sm:h-3/5 wave"
+        className="absolute h-screen w-screen -z-10 mt-10 sm:h-3/5 bot"
         alt=""
       />
 
@@ -77,9 +77,7 @@ export const Footer = ({ contactRef, servicesRef, rocketWayRef }) => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-10 sm:mt-40 lg:mt-56">
-        Copyright © Rocket Team 2023
-      </div>
+      <div className="text-center mt-16">Copyright © Rocket Team 2023</div>
     </>
   );
 };

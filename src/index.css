@@ -157,10 +157,6 @@ body {
   }
 }
 
-.wave {
-  animation: wave 30s infinite, colorRotate 20s infinite;
-}
-
 .colorRotate {
   animation: colorRotate 20s infinite;
 }
@@ -240,5 +236,8 @@ body {
 @media screen and (width > 1200px) {
   .rocket-way:hover {
     transform: scale(1.01) !important;
+  }
+  .wave {
+    animation: wave 30s infinite, colorRotate 20s infinite;
   }
 }
