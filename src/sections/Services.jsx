@@ -22,7 +22,10 @@ export const Services = ({ servicesRef }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col gap-10 overflow-hidden" ref={servicesRef}>
+    <div
+      className="flex flex-col gap-10 overflow-hidden z-10"
+      ref={servicesRef}
+    >
       <div className="h-14 sm:h-0"></div>
       <div className="">
         <img
@@ -52,9 +55,9 @@ export const Services = ({ servicesRef }) => {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               key={index}
               viewport={{ once: true }}
-              className=" bg-white rounded-3xl  shadow-md m-2 z-10 "
+              className=" bg-white rounded-3xl  shadow-md m-2"
             >
-              <div className="flex items-center justify-between m-2">
+              <div className="flex items-center justify-between m-2 z-10">
                 <label
                   className="text-2xl ml-3"
                   style={{ fontFamily: "SequelSansHeavyHead" }}

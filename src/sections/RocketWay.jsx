@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { rocketWay } from "../assets/content/rocketWay";
 import Logo from "../assets/images/header/rocketTeamLogo.png";
 import { motion } from "framer-motion";
+import { Meteorites3D } from "../components/Meteorites3D";
 
 export const RocketWay = ({ rocketWayRef }) => {
   const { t } = useTranslation();
@@ -14,7 +15,6 @@ export const RocketWay = ({ rocketWayRef }) => {
       <h2 className="text-center">
         <div className="flex w-full justify-center sm:justify-start items-center gap-2 z-10">
           {t("rocketWayTitle")}
-
           <div className="absolute">
             <div className="orbit relative rounded">
               <img src={Logo} className="w-10 absolute right-0 rocket" />
