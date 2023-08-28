@@ -57,7 +57,7 @@ export const Hero = ({ contactRef }) => {
     >
       <img
         src={BGImage}
-        className="absolute w-screen top-0 -z-10 h-4/6 sm:h-3/5 wave"
+        className="absolute w-screen top-0 -z-10 h-4/6 sm:h-3/5"
         style={{
           transform: `translateY(${scroll * 0.2}px)`,
         }}
