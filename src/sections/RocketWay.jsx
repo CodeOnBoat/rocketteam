@@ -12,7 +12,7 @@ export const RocketWay = ({ rocketWayRef }) => {
     <div className="z-10">
       <div className="h-2 z-10" ref={rocketWayRef}></div>
 
-      <h2 className="text-center">
+      {/* <h2 className="text-center">
         <div className="flex w-full justify-center sm:justify-start items-center gap-2 z-10">
           {t("rocketWayTitle")}
           <div className="absolute">
@@ -21,7 +21,7 @@ export const RocketWay = ({ rocketWayRef }) => {
             </div>
           </div>
         </div>
-      </h2>
+      </h2> */}
       <p>{t("rocketWaySubtitle")}</p>
       <div className="my-8">
         <motion.ul>

@@ -30,7 +30,7 @@ export const Services = ({ servicesRef }) => {
       <div className="">
         <img
           src={BGimage}
-          className="absolute w-screen -z-10 h-3/4 md:h-full lg:h-4/6 left-0  opacity-50 lg:opacity-100 "
+          className="absolute w-screen -z-10 h-3/4 md:h-full lg:h-4/6 left-0  opacity-50 lg:opacity-100 wave"
         />
         <img
           src={BGimage}
