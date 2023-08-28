@@ -23,8 +23,8 @@ export const RocketWay = ({ rocketWayRef }) => {
         </div>
       </h2> */}
       <p>{t("rocketWaySubtitle")}</p>
-      <div className="my-8">
-        <motion.ul>
+      <div className="my-8 flex relative">
+        <motion.ul className="md:w-1/2">
           {rocketWay.map((way, index) => (
             <motion.div
               viewport={{ once: true }}
@@ -50,6 +50,7 @@ export const RocketWay = ({ rocketWayRef }) => {
             </motion.div>
           ))}
         </motion.ul>
+        <Meteorites3D />
       </div>
     </div>
   );

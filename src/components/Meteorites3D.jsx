@@ -7,16 +7,16 @@ export const Meteorites3D = () => {
   useEffect(() => {
     if (canvasRef.current) {
       const app = new Application(canvasRef.current);
-      app.load("https://prod.spline.design/IqiMMBnE2rfmHIyF/scene.splinecode");
+      app.load("https://prod.spline.design/e6UpFYoS7GqAbZnT/scene.splinecode");
     }
   }, [canvasRef]);
 
   return (
-    <div
-      className="absolute"
-      style={{ width: "15em", height: "15em", opacity: ".5", zIndex: "-1" }}
-    >
-      <canvas id="canvas3d" style={{ zIndex: "-1" }} ref={canvasRef}></canvas>
-    </div>
+    <canvas
+      id="canvas3d"
+      className="absolute -z-10"
+      style={{ left: "20%" }}
+      ref={canvasRef}
+    ></canvas>
   );
 };
