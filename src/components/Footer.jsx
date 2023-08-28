@@ -5,14 +5,15 @@ import Logo from "../assets/images/header/rocketTeamLogo.png";
 export const Footer = ({ contactRef, servicesRef, rocketWayRef }) => {
   const { t } = useTranslation();
   return (
-    <>
-      <img
-        src={BGimage}
-        className="absolute h-screen w-screen -z-10 mt-10 sm:h-3/5 bot"
-        alt=""
-      />
-
-      <div className=" flex w-full justify-center mt-20  ">
+    <div
+      style={{
+        backgroundImage: `url(${BGimage})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+      className="pb-6"
+    >
+      <div className="flex w-full h-full mt-28 justify-center py-14">
         <div className="flex flex-col-reverse gap-20  w-8/12 justify-between sm:flex-row">
           <div className="flex flex-col-reverse sm:flex-col gap-5 text-center sm:text-start ">
             <div className="flex g-2 items-center justify-center">
@@ -77,7 +78,7 @@ export const Footer = ({ contactRef, servicesRef, rocketWayRef }) => {
           </div>
         </div>
       </div>
-      <div className="text-center mt-16">Copyright © Rocket Team 2023</div>
-    </>
+      <div className="text-center mt-10">Copyright © Rocket Team 2023</div>
+    </div>
   );
 };
