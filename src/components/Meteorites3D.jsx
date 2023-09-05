@@ -14,7 +14,7 @@ export const Meteorites3D = () => {
   return (
     <canvas
       id="canvas3d"
-      className="absolute -z-10"
+      className="absolute -z-10 hidden md:visible"
       style={{ left: "20%" }}
       ref={canvasRef}
     ></canvas>

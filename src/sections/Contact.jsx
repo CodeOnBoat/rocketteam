@@ -59,7 +59,7 @@ export const Contact = ({ contactRef }) => {
   };
 
   return (
-    <div className="px-4 relative mb-28 bg-white rounded-3xl shadow-md">
+    <div className="px-4 relative mb-28 bg-white md:rounded-3xl shadow-md">
       <div className="h-10" ref={contactRef}></div>
       <motion.div
         className="overflow-x-hidden"
@@ -68,7 +68,7 @@ export const Contact = ({ contactRef }) => {
         transition={{ duration: 0.3 }}
         viewport={{ once: true }}
       >
-        <div className="flex items-center w-full justify-center bg-gradientRocketWay absolute left-0 top-0 p-2 gap-3 rounded-t-3xl colorRotate">
+        <div className="flex items-center w-full justify-center bg-gradientRocketWay absolute left-0 top-0 p-2 gap-3 md:rounded-t-3xl colorRotate">
           <img src={Logo} className=" w-10 md:w-8" />
           <div className="text-xl md:text-md tracking-widest">Rocket Team</div>
         </div>

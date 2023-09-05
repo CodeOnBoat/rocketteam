@@ -9,19 +9,17 @@ export const RocketWay = ({ rocketWayRef }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="z-10">
+    <div className="z-10 px-2">
       <div className="h-2 z-10" ref={rocketWayRef}></div>
+      <h2 className="md:text-left">{t("rocketWayTitle")}</h2>
 
-      {/* <h2 className="text-center">
-        <div className="flex w-full justify-center sm:justify-start items-center gap-2 z-10">
-          {t("rocketWayTitle")}
+      {/* <div className="flex w-full justify-center sm:justify-start items-center gap-2 z-10">
           <div className="absolute">
             <div className="orbit relative rounded">
               <img src={Logo} className="w-10 absolute right-0 rocket" />
             </div>
           </div>
-        </div>
-      </h2> */}
+        </div> */}
       <p>{t("rocketWaySubtitle")}</p>
       <div className="my-8 flex relative">
         <motion.ul className="md:w-1/2">

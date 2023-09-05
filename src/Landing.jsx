@@ -9,7 +9,7 @@ import { WhyUs } from "./sections/WhyUs";
 
 export const Landing = ({ contactRef, servicesRef, rocketWayRef }) => {
   return (
-    <div className="w-11/12 max-w-7xl m-auto flex flex-col gap-28 ">
+    <div className="max-w-7xl m-auto flex flex-col gap-28 ">
       <Hero contactRef={contactRef} />
       <Services servicesRef={servicesRef} />
       <RocketWay rocketWayRef={rocketWayRef} />
