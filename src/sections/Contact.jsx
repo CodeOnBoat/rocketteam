@@ -59,7 +59,7 @@ export const Contact = ({ contactRef }) => {
   };
 
   return (
-    <div className="px-4 relative mb-28 bg-white md:rounded-3xl shadow-md">
+    <div className="px-4 relative mb-28 bg-white md:rounded-3xl shadow-md md:mx-10">
       <div className="h-10" ref={contactRef}></div>
       <motion.div
         className="overflow-x-hidden"

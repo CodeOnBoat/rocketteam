@@ -9,7 +9,7 @@ export const RocketWay = ({ rocketWayRef }) => {
   const { t } = useTranslation();
 
   return (
-    <div className="z-10 px-2">
+    <div className="z-10 px-2 md:px-10">
       <div className="h-2 z-10" ref={rocketWayRef}></div>
       <h2 className="md:text-left">{t("rocketWayTitle")}</h2>
 

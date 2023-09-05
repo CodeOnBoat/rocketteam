@@ -46,7 +46,7 @@ export const Hero = ({ contactRef }) => {
 
   return (
     <motion.div
-      className="flex flex-col justify-center items-center gap-12 mt-5 sm:mt-20"
+      className="flex flex-col justify-center items-center gap-12 mt-5 sm:mt-20 mx-4"
       style={{
         minHeight: "60vh",
       }}

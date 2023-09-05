@@ -23,7 +23,7 @@ export const Services = ({ servicesRef }) => {
 
   return (
     <div
-      className="flex flex-col gap-10 overflow-hidden z-10"
+      className="flex flex-col gap-10 overflow-hidden z-10 md:mx-10"
       ref={servicesRef}
     >
       <div className="h-14 sm:h-0"></div>
